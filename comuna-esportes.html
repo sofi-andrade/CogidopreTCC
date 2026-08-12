@@ -51,39 +51,44 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 20px 24px;
+      padding: 19px 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    .logo {
-      font-weight: 800;
-      font-size: 1.4rem;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+    .logo-img {
+      height: 56px;
+      /* altura base no desktop */
+      width: auto;
+      /* mantém a proporção da imagem */
+      max-width: 260px;
+      /* evita que fique grande demais */
     }
 
-    .logo span:nth-child(1) {
-      color: #ff5fa2;
+    @media (max-width: 480px) {
+      .logo-img {
+        height: 40px;
+      }
+
+      /* menor no mobile */
     }
 
-    .logo span:nth-child(2) {
-      color: #4da3ff;
-    }
-
-    .logo span:nth-child(3) {
-      color: #ffd54f;
-    }
 
     nav.main-nav {
       display: flex;
       gap: 40px;
+      font-weight: 600;
       font-size: 1rem;
     }
 
+    nav.main-nav a {
+      padding: 8px 14px;
+      border-radius: 40px;
+      transition: background 0.2s ease;
+    }
+
     nav.main-nav a:hover {
-      color: var(--accent-blue);
+      background: rgba(255, 255, 255, 0.1);
     }
 
     .nav-right {
@@ -135,7 +140,7 @@
       display: flex;
       align-items: flex-end;
     }
-
+    
     .hero-inner img {
       position: absolute;
       inset: 0;
@@ -144,7 +149,7 @@
       object-fit: cover;
       z-index: 0;
     }
-
+  
     .hero-inner::after {
       content: "";
       position: absolute;
@@ -227,8 +232,7 @@
       flex: 1 1 200px;
       background: #02002465;
       background: radial-gradient(circle, rgba(2, 0, 36, 0.459) 0%, rgba(9, 9, 121, 0.514) 51%);
-      border: solid #ffffff;
-      border: 1px solid var(--pill-border);
+      border: 1.2px solid var(--pill-border);
       border-radius: 999px;
       padding: 16px 26px;
       display: flex;
@@ -242,8 +246,8 @@
 
     .pill:hover {
       transform: translateY(-2px);
-      background: #0200248e;
-      background: radial-gradient(circle, rgba(2, 0, 36, 0.575) 0%, rgba(9, 9, 121, 0.473) 51%);
+      background: #000000b3;
+      background: radial-gradient(circle, rgba(0, 0, 0, 0.63) 0%, rgba(5, 5, 61, 0.625) 51%);
 
     }
 
@@ -462,7 +466,7 @@
 
   <header>
     <div class="logo">
-      <span>C</span><span>O</span><span>M</span><span style="color:#fff;">UNA</span>
+      <img src="img/logo-comuna-esportes.png" alt="" class="logo-img">
     </div>
     <nav class="main-nav">
       <a href="#">Início</a>
@@ -481,8 +485,7 @@
 
   <section class="hero">
     <div class="hero-inner">
-      <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1600&q=80"
-        alt="Jovem em comunidade à noite">
+      <img src="img/WhatsApp Image 2026-03-26 at 23.54.54 (2).jpeg" alt="Jovem em comunidade à noite">
       <div class="hero-content">
         <h1>COMUNA<br>ESPORTES</h1>
         <p>Fortalecendo o talento periférico através da união, saúde e cultura urbana. Junte-se ao movimento que
