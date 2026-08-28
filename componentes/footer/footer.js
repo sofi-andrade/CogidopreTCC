@@ -1,0 +1,102 @@
+export class footerClass extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' })
+        this.shadowRoot.innerHTML = `
+        <style>
+        
+          :host {
+                display: block;
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            footer {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 30px 24px 40px;
+                border-top: 1px solid #2c2c2c;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 20px;
+                font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+                color: #f4f4f4;
+            }
+
+            footer h4 {
+                font-size: 1.1rem;
+                font-weight: 700;
+                margin-bottom: 6px;
+            }
+
+            footer p {
+                color: var(--text-dim, #999);
+                font-size: 0.9rem;
+            }
+
+            .social {
+                display: flex;
+                gap: 14px;
+                stroke: #fff;
+            }
+
+            .social a {
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+                background: #232323;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform .14s ease, background .14s ease;
+            }
+
+            .social a:hover {
+                background: #333;
+                stroke: #43009A;
+                border: 0.5px solid #43009A;
+                box-shadow: rgba(44, 43, 43, 0.158) 0px 2px 8px;
+            }
+
+            @media (max-width: 480px) {
+                footer {
+                    padding: 24px 16px 32px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+        </style>
+
+        <footer>
+        
+        <div>
+      <h4>Entre em contato</h4>
+      <p>comunaesportes@gmail.com</p>
+    </div>
+    <div class="social">
+      <a href="#" aria-label="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+          <rect x="3" y="3" width="18" height="18" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17.5" cy="6.5" r="0.8" fill="#fff" />
+        </svg>
+      </a>
+      <a href="#" aria-label="E-mail">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+          <rect x="3" y="5" width="18" height="14" rx="2" />
+          <path d="M3 7l9 6 9-6" />
+        </svg>
+      </a>
+    </div>
+        
+        </footer>
+        
+        `
+    }
+}
