@@ -13,7 +13,7 @@ export class menuClass extends HTMLElement {
            <header>
         <nav class="nav-bar">
             <div class="logo">
-                <img src="img/logo-comuna-esportes.png" alt="" class="logo-img">
+                <img src="src/img/logo-comuna-esportes.png" alt="" class="logo-img">
             </div>
             <div class="main-nav">
 
