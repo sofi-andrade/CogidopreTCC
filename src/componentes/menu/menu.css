@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 6rem;
-
+  
 
 }
 
@@ -102,7 +102,7 @@ a {
     padding-top: 10px;
     border-top: solid 1px #3d3a3a;
     transition: opacity 0.4s ease;
-    
+   
 }
 
 .mobile-menu-icon {
