@@ -1,4 +1,4 @@
-import { menuShow } from "./script.js";
+import { menuShow , setupSearchMove } from "./script.js";
 
 export class menuClass extends HTMLElement {
     constructor() {
@@ -6,9 +6,9 @@ export class menuClass extends HTMLElement {
         this.attachShadow({ mode: 'open' })
         this.shadowRoot.innerHTML = `
          <link rel="stylesheet" href="src/componentes/menu/menu.css">
-         <link rel="stylesheet" href="src/view/css/style.css">
+         
         
-       <header>
+       
          
            <header>
         <nav class="nav-bar">
@@ -26,11 +26,18 @@ export class menuClass extends HTMLElement {
 
             </div>
             <div class="nav-right">
-                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="7" />
-                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                </svg>
-
+                <div class="search-wrap">
+                    <div class="search-icon">
+                        <input type="text" class="search-txt" name="">
+                        <a href="#" class="search-btn">
+                         <svg viewBox="0 0 24 24"  width="18" height="18" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round">
+                            <circle cx="11" cy="11" r="7" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                         </svg>
+                        </a>
+                       
+                    </div>   
+                </div>
                 <div class="avatar">SR</div>
 
 
@@ -59,5 +66,6 @@ export class menuClass extends HTMLElement {
     
      connectedCallback() {
         menuShow(this.shadowRoot);
+        setupSearchMove(this.shadowRoot);
     }
 }

@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
 .nav-bar {
     display: flex;
     align-items: center;
@@ -76,11 +83,8 @@ a {
     gap: 24px;
 }
 
-.search-icon {
-    width: 22px;
-    height: 22px;
-    cursor: pointer;
-}
+
+
 
 .avatar {
     margin: 10px;
@@ -121,6 +125,58 @@ a {
     cursor: pointer;
 }
 
+
+
+.search-wrap {
+    flex-shrink: 0; /* não deixa esse item ser espremido por outros */
+    display: flex;
+    
+}
+
+.search-icon {
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background: #222222;
+    transition: width 0.5s;
+}
+
+.search-icon:hover {
+    width: 240px;
+}
+
+.search-txt {
+    border-radius: 40px;
+    border: none;
+    background: none;
+    outline: none;
+    color: #f0f5fb;
+    font-size: 16px;
+    line-height: 30px;
+    width: 0;
+    transition: .5s;
+}
+
+.search-icon:hover > .search-txt {
+    background-color: #222222;
+    width: 200px;
+    padding: 0 6px;
+}
+
+.search-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
 @media (max-width: 900px) {
     .main-nav {
         gap: 24px;
@@ -131,14 +187,35 @@ a {
 }
 
 @media (max-width: 768px) {
+
+    
     div.main-nav {
         display: none;
     }
 
     .nav-bar {
+        flex-wrap: wrap;
         padding: 1rem 2rem;
     }
+    .search-wrap {
+        width: 50px;
+        flex-basis: 100%;  /* força ocupar a linha inteira */
+        order: 3;          /* garante que fique DEPOIS de logo e nav-right */
+        display: flex;
+        justify-content: center;
+   
+        margin-top: 12px;
+    }
 
+    .search-icon {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .search-icon:hover {
+        width: 100%;
+        max-width: 320px;
+    }
     .mobile-menu-icon {
         display: block;
     }
