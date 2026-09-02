@@ -1,0 +1,78 @@
+:root {
+  --bg: #141414;
+  --bg-card: #1c1c1c;
+  --pill: #2a2450;
+  --pill-border: #4b3f8a;
+  --text: #f4f4f4;
+  --text-dim: #b7b7b7;
+  --accent-pink: #ff5fa2;
+  --accent-blue: #4da3ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.pill {
+  flex: 1 1 200px;
+  background: #02002465;
+  background: radial-gradient(circle, rgba(2, 0, 36, 0.459) 0%, rgba(9, 9, 121, 0.514) 51%);
+  border: 1.2px solid var(--pill-border);
+  border-radius: 999px;
+  padding: 16px 26px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: transform .15s ease, background .15s easse;
+}
+
+.pill:hover {
+  transform: translateY(-2px);
+  background: #000000b3;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.63) 0%, rgba(5, 5, 61, 0.625) 51%);
+
+}
+
+.pill .icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px){
+
+
+  .sports {
+    gap: 12px;
+  }
+
+  .pill {
+    flex: 1 1 45%;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+
+  .sports {
+    padding: 0 16px;
+  }
+
+  .pill {
+    flex: 1 1 100%;
+  }
+
+ 
+
+
+}
