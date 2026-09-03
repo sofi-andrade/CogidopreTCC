@@ -5,7 +5,7 @@ export class modalidadeClass extends HTMLElement{
         this.attachShadow({ mode: 'open' })
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="src/componentes/modalidades/modalidade.css">
-        <link rel="stylesheet" href="src/view/css/style.css">
+    
         
         <div class="pill">
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">

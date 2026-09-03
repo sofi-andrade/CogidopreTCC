@@ -1,24 +1,12 @@
-:root {
-  --bg: #141414;
-  --bg-card: #1c1c1c;
-  --pill: #2a2450;
-  --pill-border: #4b3f8a;
-  --text: #f4f4f4;
-  --text-dim: #b7b7b7;
-  --accent-pink: #ff5fa2;
-  --accent-blue: #4da3ff;
-}
-
-* {
+:host , .pill ,icon{
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+ 
 }
 
 
 
 .pill {
-  flex: 1 1 200px;
+  width: 100%;
   background: #02002465;
   background: radial-gradient(circle, rgba(2, 0, 36, 0.459) 0%, rgba(9, 9, 121, 0.514) 51%);
   border: 1.2px solid var(--pill-border);
@@ -47,14 +35,10 @@
 }
 
 @media (max-width: 768px){
-
-
-  .sports {
-    gap: 12px;
+  :host {
+    flex: 1 1 45%; /* Componente passa a ocupar metade da largura em tablets */
   }
-
   .pill {
-    flex: 1 1 45%;
     padding: 14px 18px;
     font-size: 0.95rem;
   }
@@ -63,11 +47,9 @@
 
 @media (max-width: 480px) {
 
-
-  .sports {
-    padding: 0 16px;
+  :host {
+    flex: 1 1 100%; /* Componente passa a ocupar a linha inteira em celulares */
   }
-
   .pill {
     flex: 1 1 100%;
   }

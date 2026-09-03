@@ -157,12 +157,14 @@ img {
 
 /* SPORT PILLS */
 .sports {
+  scrollbar-width:auto;
   max-width: 1200px;
   margin: 0 auto 50px;
   padding: 0 24px;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  
 }
 
 .pill {
@@ -260,7 +262,9 @@ img {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-
+ .sports{
+  flex-wrap: wrap;
+ }
   .hero-content h1 {
     font-size: 2.1rem;
   }
